@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4f46e5;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 80px;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #4f46e5;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #3730a3;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #4f46e5;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.developer-avatar {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-developer {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.dev-body {
+    width: 80px;
+    height: 100px;
+    background: #4f46e5;
+    border-radius: 40px 40px 20px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: breathe 4s ease-in-out infinite;
+}
+
+.dev-head {
+    width: 60px;
+    height: 60px;
+    background: #fbbf24;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dev-hair {
+    width: 50px;
+    height: 30px;
+    background: #1f2937;
+    border-radius: 25px 25px 0 0;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dev-eyes {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.eye {
+    width: 8px;
+    height: 8px;
+    background: #1f2937;
+    border-radius: 50%;
+    animation: blink 4s infinite;
+}
+
+.dev-smile {
+    width: 20px;
+    height: 10px;
+    border: 2px solid #1f2937;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.laptop {
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.laptop-screen {
+    width: 80px;
+    height: 50px;
+    background: #1f2937;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    transform-origin: bottom;
+    animation: typing 5s ease-in-out infinite;
+}
+
+.laptop-base {
+    width: 100px;
+    height: 10px;
+    background: #6b7280;
+    border-radius: 0 0 8px 8px;
+    position: absolute;
+    bottom: 0;
+}
+
+.screen-content {
+    width: 70px;
+    height: 40px;
+    background: #065f46;
+    border-radius: 4px;
+    margin: 5px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.code-lines {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+}
+
+.code-line {
+    height: 2px;
+    background: #10b981;
+    margin: 3px 0;
+    border-radius: 1px;
+    animation: codeTyping 3s infinite;
+}
+
+.code-line:nth-child(1) {
+    width: 80%;
+    animation-delay: 0s;
+}
+
+.code-line:nth-child(2) {
+    width: 60%;
+    animation-delay: 0.5s;
+}
+
+.code-line:nth-child(3) {
+    width: 90%;
+    animation-delay: 1s;
+}
+
+.code-line:nth-child(4) {
+    width: 40%;
+    animation-delay: 1.5s;
+}
+
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.code-symbol {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+    animation: floatSymbol 6s linear infinite;
+}
+
+.code-symbol:nth-child(1) {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.code-symbol:nth-child(2) {
+    left: 70%;
+    animation-delay: 2s;
+}
+
+.code-symbol:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: translateX(-50%) scaleY(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scaleY(0.95);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    90%,
+    100% {
+        height: 8px;
+    }
+
+    95% {
+        height: 2px;
+    }
+}
+
+@keyframes typing {
+
+    0%,
+    100% {
+        transform: rotateX(0deg);
+    }
+
+    50% {
+        transform: rotateX(-10deg);
+    }
+}
+
+@keyframes codeTyping {
+    0% {
+        width: 0%;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 0.8;
+    }
+}
+
+@keyframes floatSymbol {
+    0% {
+        transform: translateY(300px) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    90% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* About Section */
+.about {
+    padding: 4rem 0;
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* Skills Section */
+.skills {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    color: #4f46e5;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.skill-progress {
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.skill-percentage {
+    font-weight: bold;
+    color: #4f46e5;
+    margin-top: 0.5rem;
+}
+
+/* Projects Section */
+.projects {
+    padding: 4rem 0;
+    background: white;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-content h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.project-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 0;
+    background: #1f2937;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #4f46e5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .developer-avatar {
+        width: 200px;
+        height: 200px;
+        font-size: 5rem;
+    }
+
+    .animated-developer {
+        width: 150px;
+        height: 150px;
+    }
+
+    .laptop {
+        width: 80px;
+        height: 48px;
+        bottom: 30px;
+    }
+
+    .laptop-screen {
+        width: 64px;
+        height: 40px;
+    }
+
+    .laptop-base {
+        width: 80px;
+        height: 8px;
+    }
+}
